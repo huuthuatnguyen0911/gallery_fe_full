@@ -114,7 +114,7 @@ const uploadImage = async (file) => {
   try {
     const res = await axios({
       method : "POST",
-      url: "http://localhost:3000/api/upload",
+      url: `${import.meta.env.VITE_API_URL}/api/upload`,
       data: formData,
       headers: {
         "Content-Type" : "multipart/form-date"
